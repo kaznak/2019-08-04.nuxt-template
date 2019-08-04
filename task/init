@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+set -vx
+
+stime=$(date +%Y%m%d%H%M%S)
+
+node_modules/.bin/vue init . nuxt-project
