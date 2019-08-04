@@ -1,0 +1,32 @@
+#!/bin/bash
+
+set -e
+set -vx
+set -o pipefail
+
+stime=$(date +%Y%m%d%H%M%S)
+based=$(readlink -f $PWD/$(dirname $0)/../)
+
+PATH=$based/node_modules/.bin:$PATH
+
+pushd $based/nuxt-project
+yarn start	&
+popd
+
+sleep 5
+
+curl --silent http://localhost:3000/	\
+    | minify --html	\
+    | md5sum	\
+    | grep '^b64f8b455996cabd03dbcb93cd67114d  -$'	\
+    && touch SUCCESS
+
+killall node
+
+if [ -f 'SUCCESS' ] ; then
+    rm SUCCESS
+    echo OK
+    exit 0
+else
+    exit 1
+fi
