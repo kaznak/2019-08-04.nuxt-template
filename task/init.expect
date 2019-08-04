@@ -1,0 +1,17 @@
+#!/usr/bin/expect -f
+
+spawn task/init
+
+expect {
+    "Target directory exists. Continue"	{ send "\r"; exp_continue }
+    "Project name"			{ send "\r" }
+}
+expect {
+    "Project description"		{ send "\r" }
+}
+expect {
+    "Author Name"			{ send "\r" }
+}
+expect {
+    eof					{ exit }
+}
