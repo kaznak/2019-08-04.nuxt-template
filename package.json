@@ -6,6 +6,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@vue/cli": "^3.10.0"
+    "@vue/cli": "^3.10.0",
+    "@vue/cli-init": "^3.10.0"
   }
 }
