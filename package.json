@@ -1,7 +1,7 @@
 {
-  "name": "vue-template",
+  "name": "nuxt-template",
   "version": "0.0.1",
-  "description": "vue template",
+  "description": "nuxt template",
   "author": "Kazutaka <kaznak.at.work@gmail.com>",
   "license": "MIT",
   "private": true,
