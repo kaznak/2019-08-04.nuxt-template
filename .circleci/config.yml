@@ -19,7 +19,7 @@ jobs:
           keys:
           - vue-cli-{{ checksum "template/package.json" }}
 
-      - run: npm install -g yarn
+      - run: sudo npm install -g yarn
       - run: yarn install
 
       - save_cache:
