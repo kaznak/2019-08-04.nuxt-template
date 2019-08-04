@@ -16,8 +16,8 @@ module.exports = {
       message: "Project description",
       default: "Nuxt.js project"
     },
-    name: {
-      type: "author",
+    author: {
+      type: "string",
       required: true,
       message: "Author Name"
     }
