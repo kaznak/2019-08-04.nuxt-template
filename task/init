@@ -4,5 +4,8 @@ set -e
 set -vx
 
 stime=$(date +%Y%m%d%H%M%S)
+based=$(dirname $0)/../
 
-node_modules/.bin/vue init . nuxt-project
+PATH=$based/node_modules/.bin:$PATH
+
+vue init . nuxt-project
