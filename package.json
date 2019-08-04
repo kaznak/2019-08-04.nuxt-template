@@ -1,0 +1,11 @@
+{
+  "name": "vue-template",
+  "version": "0.0.1",
+  "description": "vue template",
+  "author": "Kazutaka <kaznak.at.work@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@vue/cli": "^3.10.0"
+  }
+}
